@@ -2,30 +2,25 @@
 import cv2
 import numpy as np
 from tensorflow.python.keras.models import *
-
 import matplotlib.pyplot as plt
 import os, time
 from PIL import Image
 from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
-from flask import Flask, request, render_template, send_from_directory, flash, send_from_directory  # working with, mainly resizing, images
+from flask import Flask, request, render_template, send_from_directory, flash, send_from_directory 
 from tensorflow.python.keras.models import load_model
 from tensorflow.python.keras.preprocessing.image import img_to_array
 
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'jfif'])
-IMG_SIZE = 48
 
-# app = Flask(__name__)
-# CORS(app)
 
 app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
-# Config options - Make sure you created a 'config.py' file.
 app.config.from_object('config')
 
 MODEL_PATH="C:\\Users\\mouad\\PycharmProjects\\Dice\\models\\"
+FILE_PATH="C:\\Users\\mouad\\Desktop\\"
 
 
-from PIL import Image
 
 def make_square(im, min_size=48, fill_color=(0, 0, 0, 0)):
     x, y = im.size
@@ -36,13 +31,13 @@ def make_square(im, min_size=48, fill_color=(0, 0, 0, 0)):
 
 
 @app.route("/predict/<model>")
-def predict(model):
+def predict(model, filename):
 
     #load model
     model = load_model(MODEL_PATH+model)
 
     #load image
-    test_image = Image.open("C:\\Users\\mouad\\Desktop\\hugo.jpg")
+    test_image = Image.open(FILE_PATH+filename)
     new_image = make_square(test_image)
     new_image.save('temp.png')
 
@@ -99,106 +94,14 @@ def result():
         files = request.files.getlist("files")
 
 
+
         if files and model:
             modelname = model.filename
-            filename = predict(files, modelname)
-
-            return filename
+            return predict(modelname, files[0].filename)
 
         else:
             flash('No file part')
             return render_template('index.html')
-
-
-@app.route('/send_image/<name>')
-def send_image(name):
-    image = send_from_directory("static", name)
-    return image
-
-
-def predict(files, model):
-
-    # #load model
-    # load_model("./models/"+model)
-    #
-    # #load image
-    # img = cv2.imread(image_name)
-    # img = cv2.resize(img, (48, 48), interpolation = cv2.INTER_AREA)
-    # img = np.reshape(img, (-1, 6912)) / 255.0
-    #
-    # image_list = np.reshape(image_list, (14284, 6912)) / 255.0
-    #
-    # #predict model
-    # classes = model.predict_classes(img)
-    #
-    #
-    # #return qqch
-
-    model = load_model(MODEL_PATH+model)
-    test_datagen = ImageDataGenerator(rescale=1.0 / 255)
-    i = 0
-    labels = []
-    plt.figure(figsize=(48, 48), dpi=80)
-    plt.xlabel('xlabel', fontsize=18)
-    plt.ylabel('ylabel', fontsize=16)
-    plt.axis("off")
-    for file in files:
-        image_read = cv2.imread("C:\\Users\\mouad\\Desktop\\54258050_p0.jpg")
-        img = cv2.resize(image_read, (48, 48), interpolation=cv2.INTER_AREA)
-        image = img
-        image = Image.fromarray(image, 'RGB')
-        img = np.reshape(img, (-1, 6912)) / 255.0
-
-        # image = dataFromImage(file)
-        # img = img_to_array(image)
-        # img = np.expand_dims(image, axis=0)
-        # image = Image.fromarray(image, 'RGB')
-        # label = ''
-
-
-        result = model.predict(test_datagen.flow(img, batch_size=1))
-
-        # if result > 0.5:
-        #     labels.append('dog')
-        # else:
-        #     labels.append('cat')
-
-        if result < 1:
-            labels.append('4')
-        if result < 2 & result >1:
-            labels.append('6')
-        if result  < 3 & result >2:
-            labels.append('8')
-        if result < 4 & result >3:
-            labels.append('10')
-        if result < 5 & result >4:
-            labels.append('12')
-        if result >5:
-            labels.append('20')
-
-        plt.subplot(2, 2, i+1)
-        plt.title('This is a ' + labels[i])
-        imgplot = plt.imshow(image)
-        i += 1
-
-        if i % 10 == 0:
-            break
-
-    target = os.path.join(APP_ROOT, 'static')
-    image_name = "plot" + str(time.time()) +".jpeg"
-    finalUrl = "/".join([target, image_name])
-    plt.savefig(finalUrl, bbox_inches="tight")
-
-    return image_name
-
-
-def dataFromImage(file):
-    data = file.read()
-    image = np.asarray(bytearray(data))
-    image = cv2.imdecode(image, cv2.IMREAD_COLOR)
-    image = cv2.resize(image, (IMG_SIZE, IMG_SIZE))
-
-    return image
 
 
 @app.after_request

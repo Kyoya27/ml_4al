@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="22584aca-5cc7-49fc-8986-62d2192acfcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Dice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppWeb/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/AppWeb/predict.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AppWeb/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
-              <folding>
-                <element signature="e#1#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="99" selection-start-line="8" selection-start-column="99" selection-end-line="8" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -43,10 +39,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2293" />
-    <option name="y" value="17" />
+    <option name="x" value="2224" />
+    <option name="y" value="16" />
     <option name="width" value="1401" />
-    <option name="height" value="988" />
+    <option name="height" value="1061" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -162,7 +158,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2293" y="17" width="1401" height="988" extended-state="1" />
+    <frame x="2224" y="16" width="1401" height="1061" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -174,7 +170,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32982457" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30387932" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -240,11 +236,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AppWeb/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
-          <folding>
-            <element signature="e#1#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" column="99" selection-start-line="8" selection-start-column="99" selection-end-line="8" selection-end-column="99" />
         </state>
       </provider>
     </entry>

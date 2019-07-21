@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d686a5c-3cbc-4f83-a6ea-2c614ec673ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../predict/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../predict/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../predict/AppWeb/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/../predict/AppWeb/predict.py" afterDir="false" />
     </list>
@@ -17,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/diceDataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="42" column="4" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="53" selection-end-column="16" />
+            <state relative-caret-position="240">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -113,10 +112,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2293" />
-    <option name="y" value="17" />
+    <option name="x" value="2224" />
+    <option name="y" value="16" />
     <option name="width" value="1401" />
-    <option name="height" value="988" />
+    <option name="height" value="1061" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -310,7 +309,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
@@ -402,8 +401,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/diceDataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="42" column="4" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="53" selection-end-column="16" />
+        <state relative-caret-position="240">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
